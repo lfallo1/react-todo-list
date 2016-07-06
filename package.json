@@ -17,6 +17,8 @@
     "flux": "^2.1.1",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.1.0",
+    "gulp-open": "^2.0.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "reactify": "^1.1.1",

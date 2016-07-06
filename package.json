@@ -19,8 +19,10 @@
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^4.1.0",
     "gulp-open": "^2.0.0",
-    "react": "^15.2.0",
+    "history": "^1.13.1",
+    "react": "^0.14.8",
     "react-dom": "^15.2.0",
+    "react-route": "^1.0.3",
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"

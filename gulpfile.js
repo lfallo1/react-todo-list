@@ -7,6 +7,7 @@ var browserify = require('browserify'); // Bundles JS
 var reactify = require('reactify');  // Transforms React JSX to JS
 var source = require('vinyl-source-stream'); // Use conventional text streams with Gulp
 var concat = require('gulp-concat'); //Concatenates files
+var eslint = require('gulp-eslint');
 
 var config = {
     port: 9005,
@@ -14,6 +15,7 @@ var config = {
     paths: {
         html: './src/*.html',
         jsx: './src/**/*.jsx',
+        js: './src/**/*.js',
         images: './src/images/*',
         css: './src/css/*.css',
         public: './public',
@@ -65,10 +67,17 @@ gulp.task('images', function () {
         .pipe(connect.reload());
 });
 
+gulp.task('lint', function(){
+    return gulp.src([config.paths.js,'!node_modules/**'])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
+});
+
 gulp.task('watch', function() {
     gulp.watch(config.paths.html, ['html']);
-    gulp.watch(config.paths.jsx, ['jsx']);
+    gulp.watch([config.paths.jsx, config.paths.js], ['jsx', 'lint']);
     gulp.watch(config.paths.css, ['css']);
 });
 
-gulp.task('default', ['html', 'jsx', 'css', 'images', 'open', 'watch']);
+gulp.task('default', ['html', 'jsx', 'lint', 'css', 'images', 'open', 'watch']);

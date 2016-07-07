@@ -72,5 +72,3 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['html', 'jsx', 'css', 'images', 'open', 'watch']);
-
-gulp.task('default-js', ['jsx','open']);

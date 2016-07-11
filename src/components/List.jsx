@@ -1,5 +1,5 @@
 var React = require('react');
-var ListItem = require('./ListItem.jsx');
+var ListItem = require('ListItem');
 
 var ingredients = [{id:1, name:'eggs'},{id:2,name:'bacon'},{id:3,name:'cheese'}];
 

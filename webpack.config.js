@@ -7,6 +7,8 @@ module.exports = {
   resolve: {
     root: __dirname + '/src',
     alias: {
+      List : 'components/List.jsx',
+      ListItem : 'components/ListItem.jsx',
     },
     extensions: ['', '.js', '.jsx']
   },

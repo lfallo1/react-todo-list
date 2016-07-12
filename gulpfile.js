@@ -9,8 +9,10 @@ var source = require('vinyl-source-stream'); // Use conventional text streams wi
 var concat = require('gulp-concat'); //Concatenates files
 var eslint = require('gulp-eslint');
 
+var port = process.env.PORT || 9005;
+
 var config = {
-    port: 9005,
+    port: port,
     devBaseUrl: 'http://localhost',
     paths: {
         html: './src/*.html',
@@ -81,3 +83,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['html', 'jsx', 'lint', 'css', 'images', 'open', 'watch']);
+
+gulp.task('serve', ['html', 'jsx', 'lint', 'css', 'images', 'watch']);

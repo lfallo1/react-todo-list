@@ -47,7 +47,11 @@ gulp.task('html', function() {
 });
 
 gulp.task('jsx', function() {
-    browserify(config.paths.mainJsx)
+        browserify({
+          entries: [config.paths.mainJsx],
+          extensions: ['.jsx', 'js'],
+          paths: ['./node_modules', './src/components', '.src/services']
+        })
         .transform(reactify)
         .bundle()
         .on('error', console.error.bind(console))

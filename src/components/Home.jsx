@@ -6,4 +6,4 @@ var Home = (props) => {
   );
 };
 
-module.exports = Weather;
+module.exports = Home;

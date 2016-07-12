@@ -34,7 +34,7 @@ node_modules
 node_modules/
 node_modules/*
 jspm_packages
-public/
+public/bundle.js
 
 # Optional npm cache directory
 .npm

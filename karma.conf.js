@@ -1,19 +1,16 @@
-module.exports = function (config) {
-  config.set({
-    browsers: ['Chrome'],
-    singleRun: true,
-    frameworks: ['mocha', 'browserify'],
-    files: [
-      'src/tests/**/*.test.jsx'
-    ],
+module.exports = function(karma) {
+  karma.set({
+
+    frameworks: [ 'browserify', 'jasmine'],
+    files: ['src/tests/**/*.jsx'],
     preprocessors: {
-      'src/tests/**/*.test.jsx': ['browserify','sourcemap']
+      'src/tests/**/*.jsx': [ 'browserify' ]
     },
-    reporters: ['mocha'],
-    client: {
-      mocha: {
-        timeout: '5000'
-      }
-    }
+
+    browserify: {
+      debug: true,
+      transform: [ 'reactify' ]
+    },
+    browsers: ['Chrome']
   });
-};
+}

@@ -12,6 +12,20 @@ var todos = [
   {
     id : uuid(),
     text: 'killa thing v2',
+    completed: false,
+    createdAt: moment().unix(),
+    completedAt: moment().unix()
+  },
+  {
+    id : uuid(),
+    text: 'killa thing v3',
+    completed: false,
+    createdAt: moment().unix(),
+    completedAt: undefined
+  },
+  {
+    id : uuid(),
+    text: 'killa thing v4',
     completed: true,
     createdAt: moment().unix(),
     completedAt: moment().unix()

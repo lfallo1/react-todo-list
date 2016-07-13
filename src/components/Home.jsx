@@ -1,8 +1,14 @@
 var React = require('react');
+var Todo = require('Todo');
 
 var Home = (props) => {
   return (
-    <div className="callout primary">Home page</div>
+    <div>
+      <div className="callout primary">
+        Home page
+      </div>
+      <Todo />
+    </div>
   );
 };
 

@@ -51,7 +51,7 @@ gulp.task('jsx', function() {
         browserify({
           entries: [config.paths.mainJsx],
           extensions: ['.jsx', 'js'],
-          paths: ['./node_modules', './src/components', '.src/services']
+          paths: ['./node_modules', './src/components', './src/api']
         })
         .transform(reactify)
         .bundle()

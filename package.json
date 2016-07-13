@@ -21,6 +21,7 @@
     "gulp-eslint": "^3.0.1",
     "gulp-open": "^2.0.0",
     "history": "^1.13.1",
+    "node-uuid": "^1.4.7",
     "react": "*",
     "react-dom": "^15.2.0",
     "react-router": "^2.5.2",
@@ -36,6 +37,7 @@
     "karma-mocha": "^1.1.1",
     "karma-mocha-reporter": "^2.0.4",
     "karma-sourcemap-loader": "^0.3.7",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "moment": "^2.14.1"
   }
 }

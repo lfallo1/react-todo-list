@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "react-starter",
   "version": "1.0.0",
   "description": "Simple react app",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "karma start",
     "start": "node server.js"
   },
-  "author": "Andrew Mead",
+  "author": "Lance Fallon",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.9.1",

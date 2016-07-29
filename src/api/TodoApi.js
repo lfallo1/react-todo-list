@@ -4,15 +4,22 @@ var moment = require('moment');
 var todos = [
   {
     id : uuid(),
-    text: 'killa thing',
+    text: 'Buy cornflakes',
     completed: false,
     createdAt: moment().unix(),
     completedAt: undefined
   },
   {
     id : uuid(),
-    text: 'killa thing v2',
-    completed: true,
+    text: 'Build a castle',
+    completed: false,
+    createdAt: moment().unix(),
+    completedAt: undefined
+  },
+  {
+    id : uuid(),
+    text: 'Eat cornflakes',
+    completed: false,
     createdAt: moment().unix(),
     completedAt: moment().unix()
   }
@@ -36,9 +43,10 @@ var TodoApi = {
 
   filterTodos : function(showCompleted, searchText){
     return todos.filter(function(todo){
-      return (!searchText || todo.text.toLowerCase().indexOf(searchText.toLowerCase())) &&
+      return (!searchText || todo.text.toLowerCase().indexOf(searchText.toLowerCase()) > -1) &&
         (!todo.completed || showCompleted)
-    }).sort((a,b)=>{return a.createdAt > b.createdAt ? 1 : a.createdAt < b.createdAt ? -1 : 0;})
+    });
+    //.sort((a,b)=>{return a.createdAt > b.createdAt ? 1 : a.createdAt < b.createdAt ? -1 : 0;})
   }
 
 }

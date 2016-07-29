@@ -3,6 +3,9 @@ var moment = require('moment');
 
 var TodoList = require('TodoList');
 var TodoApi = require('TodoApi');
+var AddTodo = require('AddTodo');
+var TodoSearch = require('TodoSearch');
+
 
 var TodoApp = React.createClass({
 
@@ -19,7 +22,7 @@ var TodoApp = React.createClass({
     this.setState(TodoApi.getTodos());
   },
 
-  handleToggle : function(id){
+  handleToggle : function(id) {
     var updatedTodos = this.state.todos.map(function(todo){
       if(todo.id === id){
         todo.completed = !todo.completed;
@@ -45,7 +48,9 @@ var TodoApp = React.createClass({
 
     return (
       <div>
+        <TodoSearch onSearch={this.handleSearch}/>
         <TodoList todos={filteredTodos} onToggle={this.handleToggle} />
+        <AddTodo onAddTodo={this.handleAddTodo}/>
       </div>
     );
   }

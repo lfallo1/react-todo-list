@@ -20,8 +20,6 @@ var todos = [
     id : uuid(),
     text: 'Eat cornflakes',
     completed: false,
-    text: 'killa thing v2',
-    completed: false,
     createdAt: moment().unix(),
     completedAt: moment().unix()
   }
@@ -47,8 +45,7 @@ var TodoApi = {
     return todos.filter(function(todo){
       return (!searchText || todo.text.toLowerCase().indexOf(searchText.toLowerCase()) > -1) &&
         (!todo.completed || showCompleted)
-    });
-    //.sort((a,b)=>{return a.createdAt > b.createdAt ? 1 : a.createdAt < b.createdAt ? -1 : 0;})
+    }).sort(function(a,b){return a.createdAt > b.createdAt ? 1 : a.createdAt < b.createdAt ? -1 : 0;})
   }
 
 }

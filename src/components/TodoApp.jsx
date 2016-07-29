@@ -19,7 +19,7 @@ var TodoApp = React.createClass({
 
   handleAddTodo : function(text){
     TodoApi.addTodo(text);
-    this.setState(TodoApi.getTodos());
+    this.setState({todos:TodoApi.getTodos()});
   },
 
   handleToggle : function(id) {

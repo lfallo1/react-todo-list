@@ -13,8 +13,10 @@ var TodoSearch = React.createClass({
           <input ref="searchText" className="" placeholder="filter todo list..." type="text" onChange={this.handleSearch} />
         </div>
         <div>
-          <input name="showCompleted" type="checkbox" ref="showCompleted" className="" onChange={this.handleSearch} />
-          <label htmlFor="showCompleted">Show Completed</label>
+          <label>
+            <input type="checkbox" ref="showCompleted" className="" onChange={this.handleSearch} />
+            Show Completed
+          </label>
         </div>
       </div>
     );

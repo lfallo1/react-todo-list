@@ -85,6 +85,7 @@ gulp.task('watch', function() {
     gulp.watch(config.paths.html, ['html']);
     gulp.watch([config.paths.jsx, config.paths.js], ['jsx', 'lint']);
     gulp.watch(config.paths.css, ['css']);
+    gulp.watch(config.paths.js, ['jsx', 'lint']);
 });
 
 gulp.task('default', ['html', 'jsx', 'lint', 'css', 'images', 'open', 'watch']);

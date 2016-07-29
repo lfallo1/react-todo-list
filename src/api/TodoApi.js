@@ -20,6 +20,8 @@ var todos = [
     id : uuid(),
     text: 'Eat cornflakes',
     completed: false,
+    text: 'killa thing v2',
+    completed: false,
     createdAt: moment().unix(),
     completedAt: moment().unix()
   }

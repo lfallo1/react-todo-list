@@ -3,8 +3,8 @@ var moment = require('moment');
 
 var Todo = React.createClass({
 
-  onChange : function(){
-    this.props.on
+  onToggle : function(){
+    this.props.onToggle(this.props.id);
   },
 
   render : function(){
@@ -16,12 +16,10 @@ var Todo = React.createClass({
       : 'Created ' + moment.unix(createdAt).format('MMM Do YYYY @ h:mm a');
 
     return (
-      <div onClick={()=>{
-        this.props.onToggle(id)
-      }}>
+      <label>
         {text} - {message}
-        <input type="checkbox" checked={completed} />
-      </div>
+        <input type="checkbox" checked={completed} onClick={this.onToggle}/>
+      </label>
     );
 
   }

@@ -22,8 +22,10 @@ var TodoList = React.createClass({
     };
 
     return (
-      <div>
+      <div id="todo-list-wrapper">
+        <hr />
         {renderTodos()}
+        <hr />
       </div>
     );
 

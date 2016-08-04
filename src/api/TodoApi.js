@@ -21,7 +21,7 @@ var todos = [
     text: 'Eat cornflakes',
     completed: false,
     createdAt: moment().unix(),
-    completedAt: moment().unix()
+    completedAt: undefined
   }
 ];
 
@@ -45,7 +45,9 @@ var TodoApi = {
     return todos.filter(function(todo){
       return (!searchText || todo.text.toLowerCase().indexOf(searchText.toLowerCase()) > -1) &&
         (!todo.completed || showCompleted)
-    }).sort(function(a,b){return a.createdAt > b.createdAt ? 1 : a.createdAt < b.createdAt ? -1 : 0;})
+    }).sort(function(a,b){
+      return a.createdAt > b.createdAt ? 1 : a.createdAt < b.createdAt ? -1 : 0;
+    })
   }
 
 }

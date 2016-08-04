@@ -1,2 +1,43 @@
-body{
+.page-title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.container label{
+    font-size: 16px;
+}
+
+.container form label{
+    font-weight: bolder;
+}
+
+.todo-item{
+    padding: 18px 8px;
+}
+
+.todo-item .todo-text{
+    font-weight: bold;
+    display: inline;
+    margin-left: 15px;
+}
+
+.todo-item .todo-message{
+    margin-left: 40px;
+}
+
+.todo-item:hover{
+    background: #eee;
+}
+
+.todo-item input{
+    margin-left: 10px;
+}
+
+.todo-item-disabled{
+    color: rgb(180, 180, 200);
+    text-decoration: line-through;
+}
+
+#todo-list-wrapper hr{
+    border-bottom: 1px solid #ddd;
 }
